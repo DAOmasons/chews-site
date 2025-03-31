@@ -1,7 +1,7 @@
 import React from 'react';
-import grantShipsLogo from '../assets/gsLogo.svg';
+import chewsLogo from '../assets/chewsLogo.png';
 import warpcastIcon from '../assets/farcastericon.svg';
-import { FaTwitter, FaTelegram, FaDiscord } from 'react-icons/fa';
+import { FaTwitter, FaTelegram, FaGithub, FaDiscord } from 'react-icons/fa';
 import { Typography, Grid, Container } from '@mui/material';
 import alloLogo from '../assets/allowht.png';
 import envioLogo from '../assets/enviowht.png';
@@ -12,11 +12,7 @@ import graphLogo from '../assets/thegraphwht.png';
 import { TbRocketOff } from 'react-icons/tb';
 import '../style/App.css';
 
-const announcements = [
-  'Grant Ships chosen as meta-governance layer for Gitcoin Grants 23',
-  'GG23 Applications are open',
-  'Pilot Round retrospective is live - find link below',
-];
+const announcements = ['Chews Protocol is on GG23 OSS Dev Tooling!'];
 
 const Ticker = ({ messages }) => {
   return (
@@ -38,71 +34,30 @@ function HomePage() {
   return (
     <>
       <Ticker messages={announcements} />
-
-      <p className="home-title">Grant Ships</p>
-      <p className="byline">The Competitive Grants Platform</p>
-      <div className="logo-container">
-        <img src={grantShipsLogo} className="logo" alt="Grant Ships logo" />
-      </div>
-
-      {/* About Grant Ships Section */}
-      <p className="about-section">
-        <strong>HOW IT WORKS:</strong> <br />
-        <br />
-        <strong>1.</strong> Fund your Grant Ships and watch them compete.
-        <br />
-        <br />
-        <strong>2.</strong> DAO vote to signal which Ships get more funding.
-        <br />
-        <br />
-        <strong>3.</strong> Repeat and watch your Ships evolve!
+      <img className="logo-container" src={chewsLogo} alt="Chews Logo" />
+      <p className="home-title">Chews Protocol</p>
+      <p className="byline">
+        The Modular Token Curated Registry (TCR) Voting Protocol
       </p>
-
-      <div className="card-container">
-        <a
-          href="https://rules.grantships.fun"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="banner-button">Game Rules</button>
-        </a>
-
-        <a href="/pilotretro.pdf" target="_blank" rel="noopener noreferrer">
-          <button className="banner-button">Pilot Report</button>
-        </a>
-
-        <a
-          href="https://app.grantships.fun"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="banner-button">Pilot App</button>
-        </a>
-        <a
-          href="https://gg23.grantships.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="banner-button app-button">GG23</button>
-        </a>
-      </div>
-      <hr />
+      {/* About Chews Section */}
+      <p className="about-section">
+        <strong>Choose Chews Protocol to create custom voting systems.</strong>
+      </p>
+      <p className="about-section">
+        <strong>
+          {' '}
+          Create flexible and use-case-driven governance with the Chews modular
+          architecture.
+        </strong>
+      </p>
       {/* Social Media Icons */}
       <div className="social-media-icons">
         <a
-          href="https://twitter.com/grantships"
+          href="https://twitter.com/chewsprotocol"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaTwitter size={30} />
-        </a>
-        <a
-          href="https://t.me/grantships"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shake-icon"
-        >
-          <FaTelegram size={30} />
         </a>
         <a
           href="https://discord.gg/vShYcxJEuY"
@@ -112,109 +67,13 @@ function HomePage() {
           <FaDiscord size={30} />
         </a>
         <a
-          href="https://warpcast.com/~/channel/grant-ships"
+          href="https://github.com/DAOmasons/chews-protocol"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={warpcastIcon}
-            alt="Warpcast Icon"
-            style={{ width: 30, height: 30 }}
-          />
+          <FaGithub size={30} />
         </a>
       </div>
-      {/* 
-      <Container className="protocol-section">
-        <Typography variant="h4" gutterBottom>
-          Grant Ships is Powered By:
-        </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="protocol-card">
-              <a href="https://envio.dev/" target="_blank" rel="noopener noreferrer">
-                <img src={envioLogo} alt="Envio Logo" className="protocol-logo" />
-              </a>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="protocol-card">
-              <a href="https://allo.gitcoin.co/" target="_blank" rel="noopener noreferrer">
-                <img src={alloLogo} alt="Allo Protocol Logo" className="protocol-logo" />
-              </a>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="protocol-card">
-              <a href="https://www.hatsprotocol.xyz/" target="_blank" rel="noopener noreferrer">
-                <img src={hatsLogo} alt="Hats Protocol Logo" className="protocol-logo" />
-              </a>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="protocol-card">
-              <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
-                <img src={ipfsLogo} alt="IPFS Logo" className="protocol-logo" />
-              </a>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="protocol-card">
-              <a href="https://www.pinata.cloud/" target="_blank" rel="noopener noreferrer">
-                <img src={pinataLogo} alt="Pinata Logo" className="protocol-logo" />
-              </a>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="protocol-card">
-              <a href="https://thegraph.com/" target="_blank" rel="noopener noreferrer">
-                <img src={graphLogo} alt="The Graph Logo" className="protocol-logo" />
-              </a>
-            </div>
-          </Grid>
-        </Grid>
-      </Container>
-      <hr />
-      */}
-      {/* 
-      <Container className="testimonials-section">
-        <Typography variant="h4" gutterBottom>
-          What People Are Saying
-        </Typography>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="testimonial-card">
-              <Typography variant="h6" gutterBottom>
-                "It is fast other grants are really slow, is like I need to wait couple of months to get funds. GrantShips ship it fast"
-              </Typography>
-              <Typography variant="body2">
-                - kevoAdler
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="testimonial-card">
-              <Typography variant="h6" gutterBottom>
-                "Keep grinding, this is a solid project!"
-              </Typography>
-              <Typography variant="body2">
-                - Omniacs.run!
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <div className="testimonial-card">
-              <Typography variant="h6" gutterBottom>
-                "My experience with grant ship is amazing. They are accommodating. They help you a lot."
-              </Typography>
-              <Typography variant="body2">
-                - Metarave
-              </Typography>
-            </div>
-          </Grid>
-        </Grid>
-      </Container>
-      */}
-
       <p className="footer">
         © 2023-Present{' '}
         <a

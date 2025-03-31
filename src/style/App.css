@@ -20,7 +20,7 @@ html {
     #2c2c2c,
     #0d0d0d
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-image: url('../assets/starbg3.png'); /* Add your image path here */
+  background-image: url('../assets/choices_dark.png'); /* Add your image path here */
   background-size: cover;
   background-position: center;
   background-repeat: repeat-y;
@@ -53,10 +53,10 @@ html {
 .home-title {
   font-family: 'Share Tech', sans-serif; /* Fallback to sans-serif if Share Tech is not available */
   font-size: 6em;
-  line-height: 56.35px;
+  line-height: 40px;
   text-align: center;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 .card {
@@ -165,7 +165,7 @@ h1 {
 
 .byline {
   color: #ffffff;
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 1em 1em;
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
@@ -194,7 +194,7 @@ h1 {
 
 .about-section {
   background: transparent; /* Transparent background */
-  font-size: 1.8em;
+  font-size: 1.5em;
   line-height: 1em;
   color: #ffffff; /* White font color */
   padding: 10px;
@@ -208,7 +208,7 @@ h1 {
 
 @media only screen and (max-width: 768px) {
   .home-title {
-    font-size: 4em;
+    font-size: 1em;
   }
 
   .logo {
@@ -235,11 +235,16 @@ h1 {
 }
 
 .ticker-container {
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
   overflow: hidden;
   background: #000;
   color: #fff;
-  height: 50px; /* Increased height for better readability */
+  height: 50px;
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
 }
 
 .ticker-wrap {
@@ -318,4 +323,14 @@ h1 {
   background-color: transparent;
   padding: 1em;
   border: 1px solid transparent;
+}
+
+.logo-container {
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
