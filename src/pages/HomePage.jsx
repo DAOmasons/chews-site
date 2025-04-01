@@ -1,5 +1,5 @@
 import React from 'react';
-import chewsLogo from '../assets/chewsLogo.png';
+import chewsLogo from '../assets/chews_logo.png';
 import warpcastIcon from '../assets/farcastericon.svg';
 import { FaTwitter, FaTelegram, FaGithub, FaDiscord } from 'react-icons/fa';
 import { Typography, Grid, Container } from '@mui/material';
