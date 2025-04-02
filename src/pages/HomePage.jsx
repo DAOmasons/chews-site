@@ -1,18 +1,21 @@
 import React from 'react';
 import chewsLogo from '../assets/chews_logo.png';
-import warpcastIcon from '../assets/farcastericon.svg';
-import { FaTwitter, FaTelegram, FaGithub, FaDiscord } from 'react-icons/fa';
-import { Typography, Grid, Container } from '@mui/material';
-import alloLogo from '../assets/allowht.png';
-import envioLogo from '../assets/enviowht.png';
-import hatsLogo from '../assets/hatswht.png';
-import ipfsLogo from '../assets/ipfswht.png';
-import pinataLogo from '../assets/pinatawht.png';
-import graphLogo from '../assets/thegraphwht.png';
-import { TbRocketOff } from 'react-icons/tb';
+import { FaTwitter, FaGithub, FaDiscord } from 'react-icons/fa';
+
 import '../style/App.css';
 
-const announcements = ['Chews Protocol is on GG23 OSS Dev Tooling!'];
+// const announcements = ['Chews Protocol is on GG23 OSS Dev Tooling!'];
+
+const announcements = [
+  <a
+    href="https://explorer.gitcoin.co/#/round/42161/863/72"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: 'white', textDecoration: 'underline' }}
+  >
+    Chews Protocol is on GG23 OSS Dev Tooling!
+  </a>,
+];
 
 const Ticker = ({ messages }) => {
   return (
